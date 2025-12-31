@@ -1,0 +1,116 @@
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <h2 class="section-title">Featured Projects</h2>
+    
+    <div class="projects-tabs">
+      <button 
+        class="tab-button" 
+        [class.active]="activeTab === 'vanilla'"
+        (click)="setActiveTab('vanilla')">
+        <span class="tab-icon">⚡</span>
+        Vanilla JS / Pure JS
+      </button>
+      <button 
+        class="tab-button" 
+        [class.active]="activeTab === 'angular'"
+        (click)="setActiveTab('angular')">
+        <span class="tab-icon">🅰️</span>
+        Angular
+      </button>
+    </div>
+
+    <div class="projects-content">
+      <div class="projects-grid" *ngIf="activeTab === 'vanilla'">
+        <div class="project-card" *ngFor="let project of vanillaProjects">
+          <div class="project-header">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <div class="project-badge" *ngIf="project.featured">⭐ Featured</div>
+          </div>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="project-technologies">
+            <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a 
+                [href]="project.githubUrl" 
+                target="_blank" 
+                class="project-link"
+                (click)="openProject(project.githubUrl)">
+                <span>View on GitHub</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <a 
+                *ngIf="project.liveUrl"
+                [href]="project.liveUrl" 
+                target="_blank" 
+                class="project-link live-link"
+                (click)="openProject(project.liveUrl)">
+                <span>Live Demo</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-grid" *ngIf="activeTab === 'angular'">
+        <div class="project-card empty-state" *ngIf="angularProjects.length === 0">
+          <div class="empty-icon">🚀</div>
+          <h3 class="empty-title">Angular Projects Coming Soon!</h3>
+          <p class="empty-description">
+            I'm currently working on exciting Angular projects. Check back soon!
+          </p>
+        </div>
+        <div class="project-card" *ngFor="let project of angularProjects">
+          <div class="project-header">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <div class="project-badge" *ngIf="project.featured">⭐ Featured</div>
+          </div>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="project-technologies">
+            <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-links">
+              <a 
+                [href]="project.githubUrl" 
+                target="_blank" 
+                class="project-link"
+                (click)="openProject(project.githubUrl)">
+                <span>View on GitHub</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <a 
+                *ngIf="project.liveUrl"
+                [href]="project.liveUrl" 
+                target="_blank" 
+                class="project-link live-link"
+                (click)="openProject(project.liveUrl)">
+                <span>Live Demo</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

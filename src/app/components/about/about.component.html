@@ -1,0 +1,54 @@
+<section id="about" class="section about-section">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    
+    <div class="about-content">
+      <div class="about-main">
+        <div class="about-cards">
+          <div class="about-card" *ngFor="let point of aboutPoints">
+            <div class="card-icon">{{ point.icon }}</div>
+            <h3 class="card-title">{{ point.title }}</h3>
+            <p class="card-description">{{ point.description }}</p>
+          </div>
+        </div>
+
+        <div class="mission-statement">
+          <h3 class="mission-title">🎯 Mission Statement</h3>
+          <p class="mission-text">
+            My goal is to become a Professional Full Stack Developer who delivers robust, 
+            high-performance, and scalable web applications using modern tools like Angular and .NET.
+            I'm dedicated to lifelong learning, real-world development, and problem solving.
+          </p>
+        </div>
+      </div>
+
+      <div class="journey-section">
+        <div class="journey-card">
+          <h3 class="journey-title">🚀 Frontend Development Journey</h3>
+          <ul class="journey-list">
+            <li *ngFor="let item of frontendJourney">{{ item }}</li>
+          </ul>
+        </div>
+
+        <div class="journey-card">
+          <h3 class="journey-title">🔧 Backend Development Path</h3>
+          <ul class="journey-list">
+            <li *ngFor="let item of backendJourney">{{ item }}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="focus-areas">
+        <h3 class="focus-title">💼 What I've Focused On So Far</h3>
+        <div class="focus-grid">
+          <div class="focus-card" *ngFor="let area of focusAreas">
+            <div class="focus-icon">{{ area.icon }}</div>
+            <h4 class="focus-card-title">{{ area.title }}</h4>
+            <p class="focus-card-description">{{ area.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,20 @@
+<section id="skills" class="section skills-section">
+  <div class="container">
+    <h2 class="section-title">Languages & Tools</h2>
+    
+    <div class="skills-container">
+      <div class="skills-category" *ngFor="let category of categories">
+        <h3 class="category-title">{{ category }}</h3>
+        <div class="skills-grid">
+          <div class="skill-item" *ngFor="let skill of getSkillsByCategory(category)">
+            <div class="skill-icon-wrapper">
+              <img [src]="skill.icon" [alt]="skill.name" class="skill-icon" />
+            </div>
+            <span class="skill-name">{{ skill.name }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

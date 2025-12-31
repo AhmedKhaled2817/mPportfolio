@@ -1,0 +1,48 @@
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <h2 class="section-title">Let's Connect</h2>
+    
+    <div class="contact-content">
+      <div class="contact-intro">
+        <h3 class="contact-subtitle">I'm always open to discussing new projects and opportunities!</h3>
+        <p class="contact-description">
+          Whether you have a question, want to collaborate, or just want to say hello, 
+          feel free to reach out. I'll get back to you as soon as possible.
+        </p>
+      </div>
+
+      <div class="contact-cards">
+        <div class="contact-card" *ngFor="let contact of contactInfo" (click)="openLink(contact.link)">
+          <div class="contact-icon">{{ contact.icon }}</div>
+          <h4 class="contact-label">{{ contact.label }}</h4>
+          <p class="contact-value">{{ contact.value }}</p>
+          <div class="contact-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="github-stats">
+        <div class="stats-intro">
+          <h3 class="stats-title">GitHub Activity</h3>
+          <p class="stats-description">Check out my coding activity and contributions</p>
+        </div>
+        <div class="stats-images">
+          <img 
+            src="https://github-readme-stats.vercel.app/api?username=ahmedkhaled2817&show_icons=true&theme=radical" 
+            alt="GitHub Stats" 
+            class="github-stat-img"
+          />
+          <img 
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahmedkhaled2817&layout=compact&theme=radical" 
+            alt="Top Languages" 
+            class="github-stat-img"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

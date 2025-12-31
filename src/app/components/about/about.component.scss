@@ -1,0 +1,172 @@
+.about-section {
+  background: var(--bg-secondary);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about-card {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  text-align: center;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.card-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.mission-statement {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: 3rem;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.mission-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.mission-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+.journey-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.journey-card {
+  background: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--primary-color);
+}
+
+.journey-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.journey-list {
+  list-style: none;
+  padding: 0;
+  
+  li {
+    padding: 0.75rem 0;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.8;
+    border-bottom: 1px solid var(--border-color);
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.focus-areas {
+  margin-top: 2rem;
+}
+
+.focus-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--text-primary);
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.focus-card {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  text-align: center;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+    border-top: 3px solid var(--primary-color);
+  }
+}
+
+.focus-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.focus-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.focus-card-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-cards,
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .journey-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-statement {
+    padding: 2rem;
+  }
+}
+
